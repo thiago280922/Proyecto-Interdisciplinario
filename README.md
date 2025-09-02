@@ -2,8 +2,6 @@
 Proyecto-Interdisciplinario
 </h1>
 
----
-
 ## Indice
 
 1. [Descripción del Proyecto](#Descripcion-del-Proyecto)
