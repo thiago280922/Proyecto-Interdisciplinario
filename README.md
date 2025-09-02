@@ -1,6 +1,6 @@
-<p align = center>
-<h1>Proyecto-Interdisciplinario</h1>
-</p>
+<h1 align = center>
+Proyecto-Interdisciplinario
+</h1>
 
 ---
 
