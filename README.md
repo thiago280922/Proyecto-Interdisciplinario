@@ -1,5 +1,5 @@
 <p align = center>
- Proyecto-Interdisciplinario
+<h1>Proyecto-Interdisciplinario</h1>
 </p>
 
 ---
