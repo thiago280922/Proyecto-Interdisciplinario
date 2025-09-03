@@ -1,5 +1,5 @@
 <h1 align = center>
-Proyecto-Interdisciplinario - Inombiliariaa - Re/Max
+Proyecto-Interdisciplinario - Inombiliaria - Re/Max
 </h1>
 
 ## Indice
