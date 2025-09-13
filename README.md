@@ -2,7 +2,7 @@
 Proyecto-Interdisciplinario - Inombiliaria - Re/Max
 </h1>
 
-## Indice
+## 📋 Índice
 
 1. [Descripción del Proyecto](#Descripcion-del-Proyecto)
 2. [Funcionalidades](#Funcionalidades)
