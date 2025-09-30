@@ -25,6 +25,12 @@ Proyecto-Interdisciplinario - Inombiliaria - Re/Max
 
 ## Personas Desarrolladoras del Proyecto
 
+- Rosendo Osores  
+- Morena Gonzalez  
+- Thiago Casiano  
+- Brunella Figallo  
+
+
 ## Licencia
 
 
