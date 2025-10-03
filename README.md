@@ -57,11 +57,6 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
   - Estado de ventas, comisiones y actividades de los agentes.  
 
 
-## Acceso al Proyecto
-
-
-
----
 
 ## Tecnologías Utilizadas
 
