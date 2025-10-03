@@ -5,7 +5,7 @@
 <h1 align="center"> Proyecto-Interdisciplinario - Inombiliaria - Re/Max </h1>
 
 <p align = center>
-<img width="512" height="512" alt="[f397a83c-dc22-4e43-8d2c-a5a1cdca7b34" src="https://github.com/user-attachments/assets/86a3bf06-6ddf-4ad0-b64b-dc6e56f118fd](https://sdmntprwestus.oaiusercontent.com/files/00000000-749c-6230-9786-b7bd0790455f/raw?se=2025-10-03T18%3A48%3A40Z&sp=r&sv=2024-08-04&sr=b&scid=218fb5ba-8f2b-53c6-adee-eb876220385f&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-03T17%3A16%3A36Z&ske=2025-10-04T17%3A16%3A36Z&sks=b&skv=2024-08-04&sig=DNdejDkmaYUmgWeBD4srmZUwuQ81DDPxXq/n1qI6VpE%3D)" />
+<img width="512" height="512" alt="f397a83c-dc22-4e43-8d2c-a5a1cdca7b34" src="https://github.com/user-attachments/assets/86a3bf06-6ddf-4ad0-b64b-dc6e56f118fd" />
 </p>
 
 
