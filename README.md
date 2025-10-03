@@ -23,7 +23,7 @@
 ## Descripción del Proyecto
 
 <p align = center>
-<img width="912" height="1024" alt="ChatGPT Image 3 oct 2025, 02_48_45 p m" src="https://github.com/user-attachments/assets/10e93454-9896-4a04-b485-555c98e24fdd" />
+<img width="912" height="824" alt="ChatGPT Image 3 oct 2025, 02_48_45 p m" src="https://github.com/user-attachments/assets/10e93454-9896-4a04-b485-555c98e24fdd" />
 />
 </p>
 <p> Este proyecto fue desarrollado como sistema de gestión inmobiliaria para **Re/Max**.  
