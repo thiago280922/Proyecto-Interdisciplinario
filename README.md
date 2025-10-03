@@ -1,27 +1,40 @@
-<h1 align = center>
-Proyecto-Interdisciplinario - Inombiliaria - Re/Max
-</h1>
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg" width="50" alt="Bandera de Argentina"/>
+</p>
 
+<h1 align="center"> Proyecto-Interdisciplinario - Inombiliaria - Re/Max </h1>
+
+<p align = center>
+<img width="512" height="512" alt="f397a83c-dc22-4e43-8d2c-a5a1cdca7b34" src="https://github.com/user-attachments/assets/86a3bf06-6ddf-4ad0-b64b-dc6e56f118fd" />
+</p>
+
+
+  
 ## 📋 Índice
+1. [Descripción del Proyecto](#descripción-del-proyecto)  
+2. [Funcionalidades](#funcionalidades)  
+3. [Acceso al Proyecto](#acceso-al-proyecto)  
+4. [Tecnologías Utilizadas](#tecnologías-utilizadas)  
+5. [Personas Contribuyentes](#personas-contribuyentes)  
+6. [Personas Desarrolladoras del Proyecto](#personas-desarrolladoras-del-proyecto)  
+7. [Licencia](#licencia)
+---
 
-1. [Descripción del Proyecto](#Descripcion-del-Proyecto)
-2. [Funcionalidades](#Funcionalidades)
-3. [Acceso al Proyecto](#Acceso-al-Proyecto)
-4. [Tecnologias Utilizadas](#Tecnologias-Utilizadas)
-5. [Personas Contribuyentes](#Personas-Contribuyentes)
-6. [Personas Desarrolladoras del Proyecto](#Personas-Desarrolladoras-del-Proyecto)
-7. [Licencia](#Licencia)
+## Descripción del Proyecto
 
-
-## Descripción del proyecto
-Este proyecto fue desarrollado como sistema de gestión inmobiliaria para **Re/Max**.  
+<p align = center>
+<img width="912" height="512" alt="image" src="https://github.com/user-attachments/assets/dcc8ce01-4b61-4fd5-b98c-8778d8090dc3" />
+</p>
+<p> Este proyecto fue desarrollado como sistema de gestión inmobiliaria para **Re/Max**.  
 El objetivo principal es brindar una plataforma centralizada y accesible para clientes, agentes y administradores, optimizando los procesos de búsqueda de propiedades, registro de visitas, gestión de ventas y reportes.  
 
 El sistema permite a los clientes explorar propiedades mediante filtros personalizados (precio, ubicación, tipo de propiedad, ambientes), mientras que los agentes gestionan las operaciones de compraventa, visitas y leads. Los administradores cuentan con un panel general para asignar propiedades, gestionar agentes y generar reportes de rendimiento.  
 
 Además, se incorpora un calendario de visitas que asegura la organización de horarios y evita superposiciones de citas.  
+ </p>
 
 ## Funcionalidades
+
 
 - **Login y Registro de Usuarios**  
   - Clientes pueden registrarse para comprar, vender o reservar propiedades.  
@@ -44,34 +57,45 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
   - Estado de ventas, comisiones y actividades de los agentes.  
 
 
-
 ## Acceso al Proyecto
-El proyecto se encuentra en este repositorio:  
 
-👉 [Enlace al repositorio de GitHub](https://github.com/thiago280922/Proyecto-Interdisciplinario)  
 
+
+---
 
 ## Tecnologías Utilizadas
 
-- ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
-- ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
-- ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)  
-- ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)  
-- ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)  
-- ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)  
-- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="60" alt="HTML logo"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="60" alt="CSS logo"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60" alt="Python logo"/>
+  <img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png" width="45" alt="Fire Base logo"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" alt="JS logo"/>
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" width="100" alt="Flask logo"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563d7c?style=for-the-badge&logo=bootstrap&logoColor=white" width="100" alt="Bootstrap logo"/>
+  
+  
+
+</p>
+
+---
 
 ## Personas Contribuyentes  
 
-- [Repositorio GitHub Principal](https://github.com/thiago280922/Proyecto-Interdisciplinario)  
 
+https://github.com/daoldev
+
+---
 
 ## Personas Desarrolladoras del Proyecto
 
-- Leonel Pedraza 
-- Morena Gonzalez  
-- Thiago Casiano  
-- Brunella Figallo  
+- Casiano Thiago 
+- Pedraza Leonel 
+- Figallo Brunella
+- González Morena
+
+---
+
 
 
 ## Licencia
@@ -79,3 +103,5 @@ El proyecto se encuentra en este repositorio:
 Este proyecto está bajo la licencia:
 
 [![Licencia](https://img.shields.io/badge/Licencia-Apache%202.0-blue.svg)](LICENSE)
+
+
