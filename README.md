@@ -86,7 +86,6 @@ https://github.com/daoldev
 ## Personas Desarrolladoras del Proyecto
 
 - Casiano Thiago 
-- Pedraza Leonel 
 - Figallo Brunella
 - González Morena
 
