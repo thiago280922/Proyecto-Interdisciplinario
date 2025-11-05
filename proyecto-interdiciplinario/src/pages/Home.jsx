@@ -8,21 +8,14 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <svg
-                className="h-8 w-auto text-red-600"
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z"
-                  fill="#0054a4"
-                ></path>
-                <path
-                  d="M35.9868 18.996L24 38.22L12.0131 18.996C12.4661 19.1391 12.9179 19.2658 13.3617 19.3718C16.4281 20.1039 20.0901 20.5217 24 20.5217C27.9099 20.5217 31.5719 20.1039 34.6383 19.3718C35.082 19.2658 35.5339 19.1391 35.9868 18.996Z"
-                  fill="#d40026"
-                ></path>
-              </svg>
+              
+              {/* === INICIO del CAMBIO: Reemplazo del SVG por IMG === */}
+              <img
+                src={"./logo_remax.png"}
+                alt="Re/Max Logo Globo"
+                className="h-10 w-auto" // He ajustado el alto a 'h-10' para que se vea bien
+              />
+              {/* === FIN del CAMBIO === */}
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">Re/Max</h1>
             </div>
             <nav className="hidden md:flex items-center gap-8">
@@ -82,7 +75,23 @@ export default function Home() {
                 <option>Tipo de propiedad</option>
                 <option>Casa</option>
                 <option>Apartamento</option>
-                <option>Terreno</option>
+                <option>Terrenos y Lotes</option>
+                <option>PH</option>
+                <option>Cochera</option>
+                <option>Local</option>
+                <option>Oficina</option>
+                <option>Consultorio</option>
+                <option>Quinta</option>
+                <option>Chacra</option>
+                <option>Galpon</option>
+                <option>Deposito</option>
+                <option>Campo</option>
+                <option>Hotel</option>
+                <option>Fondo de comercio</option>
+                <option>Edificio</option>
+                <option>Otros</option>
+
+
               </select>
               <button
                 type="submit"
