@@ -62,7 +62,8 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
 
 <p align = center>
 
-![React Logo](./react.svg)
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="60"/>
+
 
 
 
