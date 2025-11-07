@@ -62,7 +62,7 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
 
 <p align = center </p>
   
-  
+  ![React](./react.svg)
 
 
 
