@@ -65,7 +65,7 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="60" alt="CSS logo"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60" alt="Python logo"/>
   <img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png" width="45" alt="Fire Base logo"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" alt="JS logo"/>
+
 
 
   
