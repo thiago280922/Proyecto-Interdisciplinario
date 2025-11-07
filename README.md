@@ -82,7 +82,6 @@ https://github.com/daoldev
 - Casiano Thiago 
 - Figallo Brunella
 - González Morena
-- Abandonó un integrante porque no sabia hacer nada.
 
 ---
 
