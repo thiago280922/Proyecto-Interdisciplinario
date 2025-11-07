@@ -67,8 +67,7 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
   <img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png" width="45" alt="Fire Base logo"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" alt="JS logo"/>
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" width="100" alt="Flask logo"/>
-  <img src="https://img.shields.io/badge/Bootstrap-563d7c?style=for-the-badge&logo=bootstrap&logoColor=white" width="100" alt="Bootstrap logo"/>
-  
+
   
 
 </p>
