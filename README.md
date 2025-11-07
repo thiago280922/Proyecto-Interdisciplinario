@@ -58,7 +58,7 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
 
 
 
-## Tecnologías Utilizadas
+## ⚙️ Tecnologías Utilizadas
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="80"/>
