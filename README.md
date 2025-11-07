@@ -60,8 +60,7 @@ Además, se incorpora un calendario de visitas que asegura la organización de h
 
 ## Tecnologías Utilizadas
 
-<p align="center">
- 
+
   
   
 
