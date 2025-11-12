@@ -1,12 +1,3 @@
-
-body {
-  @apply bg-background-light text-gray-800 font-display;
-}
-
-header{
-  @apply shadow-md;
-}
-
-button{
-  @apply cursor-pointer transition-transform hover:scale-105;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

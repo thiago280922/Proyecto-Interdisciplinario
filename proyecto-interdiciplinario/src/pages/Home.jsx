@@ -1,6 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 IMPORTANTE
 
 export default function Home() {
+  const navigate = useNavigate(); // 👈 para navegar sin recargar
+
+  const propiedades = [
+    {
+      id: 1,
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCuefv_KPFKsg34u-kVRjsdxSCkyH58lEiclOPfOR3IZJDf9WMLibF7Y3obp5kSEUEWOMGKzndpw9J0cEnbvNLENp6VvdE2YR7XtTfAfZ29vbaCeTAuqgAhLGJGCtRIyVZQMIT17p7po_r1quRNCbWb_aAqbj7lSunXJhZAQyMOCIfbYlu639nM7vRWYRIPIlhU7JNo-IdgWBvCNSXdbl_m20UHjkZ_Tof8-Dj1vQGF2_e3-y0cuHFR6LZcraDbWmxqUkkuZ9YjNA",
+      titulo: "Casa moderna con piscina",
+      lugar: "Ciudad de Esperanza",
+      precio: "$550,000",
+    },
+    {
+      id: 2,
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA70bMJA0MLrDSZ8nK7FxceNHv1_g30FYvkXiM2Hg_Yr5QFE6_gztEuHyqYnbL3J9f28eX7W8etyVTPZVJpNdzv6FhPJ_3l7X6aMKAsrSFclkwJ8Fn4h3qV0NUV5kTq3WdDc-Ij0XQDarVCMTu4aVLbWtS81uRUvoq58LC0Vvokc19TX8B5k20UvPbQovj6FI4y76IGcCcLgJgDb3BBtsgm5bTVcEzsz1tNEAfcM24STCQpSZA8fO7UE8r-_oq4xbC5ceJ9VzKRcg",
+      titulo: "Apartamento de lujo en el centro",
+      lugar: "Distrito Financiero",
+      precio: "$1,200,000",
+    },
+    {
+      id: 3,
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBEDJ5Pw_HALVYTgDQ82dti-Aqxt-bgzavTJPEpQHfekURlD26AeHuqKono4jYfRCkX254t2gm1YYASHrrsaBkrj1RLwL5zBR7fNmMTOdN6ZvNF-3d2sMOiMdwBp7e8Dq8-AW_X3rz-UGjEJ_2cjvu9UrGo90w5AtEM_Vx2EZaLdfJeyGkjHsZ0W34531VgfxGAy3cPBG1RWLHb6y1dPiTe_817CHy7zrAZMj7uSE4KQ7SSqIwkzCbo1eZanS2A0-L_ClEOQlmyXA",
+      titulo: "Cabaña acogedora en las afueras",
+      lugar: "Villa Tranquila",
+      precio: "$320,000",
+    },
+  ];
+
+  const [guardadas, setGuardadas] = useState([]);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("propiedadesGuardadas")) || [];
+    setGuardadas(data);
+  }, []);
+
+  const guardarPropiedad = (prop) => {
+    const yaExiste = guardadas.some((p) => p.id === prop.id);
+    if (!yaExiste) {
+      const nuevas = [...guardadas, prop];
+      setGuardadas(nuevas);
+      localStorage.setItem("propiedadesGuardadas", JSON.stringify(nuevas));
+      alert("✅ Propiedad guardada correctamente");
+    } else {
+      alert("⚠️ Esta propiedad ya fue guardada");
+    }
+  };
+
   return (
     <div className="relative min-h-screen w-full font-display bg-background-light text-gray-800 dark:bg-background-dark dark:text-gray-200">
       {/* HEADER */}
@@ -8,17 +54,18 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              
-              {/* === INICIO del CAMBIO: Reemplazo del SVG por IMG === */}
               <img
                 src={"./logo_remax.png"}
                 alt="Re/Max Logo Globo"
-                className="h-10 w-auto" // He ajustado el alto a 'h-10' para que se vea bien
+                className="h-10 w-auto"
               />
-              {/* === FIN del CAMBIO === */}
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">Re/Max</h1>
             </div>
             <nav className="hidden md:flex items-center gap-8">
+              <a href="/contacto" className="text-sm font-medium hover:text-primary">
+                Contacto y Servicios
+              </a>
+
               <a className="text-sm font-medium hover:text-primary" href="#">
                 Comprar
               </a>
@@ -33,15 +80,18 @@ export default function Home() {
               </a>
             </nav>
             <div className="flex items-center gap-4">
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Iniciar Sesión
-              </a>
-              <a
-                className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90"
-                href="#"
+              {/* 👇 usamos navigate para ir al login */}
+              <button
+                onClick={() => navigate("/login")}
+                className="text-sm font-medium hover:text-primary"
               >
-                Registrarse
-              </a>
+                Iniciar Sesión
+              </button>
+
+              
+              <a href="/registro" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
+                Regístrate
+            </a>
             </div>
           </div>
         </div>
@@ -64,42 +114,6 @@ export default function Home() {
               Explora las mejores propiedades en el mercado con nuestra
               plataforma innovadora y fácil de usar.
             </p>
-
-            <form className="mt-8 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 bg-white/10 backdrop-blur-lg p-2 rounded-lg border border-white/20">
-              <input
-                type="text"
-                placeholder="Ubicación (Ciudad, Barrio...)"
-                className="col-span-1 md:col-span-2 bg-transparent border-0 focus:ring-0 placeholder-gray-300 text-white"
-              />
-              <select className="bg-transparent border-0 focus:ring-0 text-white">
-                <option>Tipo de propiedad</option>
-                <option>Casa</option>
-                <option>Apartamento</option>
-                <option>Terrenos y Lotes</option>
-                <option>PH</option>
-                <option>Cochera</option>
-                <option>Local</option>
-                <option>Oficina</option>
-                <option>Consultorio</option>
-                <option>Quinta</option>
-                <option>Chacra</option>
-                <option>Galpon</option>
-                <option>Deposito</option>
-                <option>Campo</option>
-                <option>Hotel</option>
-                <option>Fondo de comercio</option>
-                <option>Edificio</option>
-                <option>Otros</option>
-
-
-              </select>
-              <button
-                type="submit"
-                className="flex items-center justify-center gap-2 rounded bg-primary px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition"
-              >
-                🔍 Buscar
-              </button>
-            </form>
           </div>
         </div>
 
@@ -109,30 +123,12 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Propiedades Destacadas
             </h2>
+
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-              {[
-                {
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCuefv_KPFKsg34u-kVRjsdxSCkyH58lEiclOPfOR3IZJDf9WMLibF7Y3obp5kSEUEWOMGKzndpw9J0cEnbvNLENp6VvdE2YR7XtTfAfZ29vbaCeTAuqgAhLGJGCtRIyVZQMIT17p7po_r1quRNCbWb_aAqbj7lSunXJhZAQyMOCIfbYlu639nM7vRWYRIPIlhU7JNo-IdgWBvCNSXdbl_m20UHjkZ_Tof8-Dj1vQGF2_e3-y0cuHFR6LZcraDbWmxqUkkuZ9YjNA",
-                  titulo: "Casa moderna con piscina",
-                  lugar: "Ciudad de Esperanza",
-                  precio: "$550,000",
-                },
-                {
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA70bMJA0MLrDSZ8nK7FxceNHv1_g30FYvkXiM2Hg_Yr5QFE6_gztEuHyqYnbL3J9f28eX7W8etyVTPZVJpNdzv6FhPJ_3l7X6aMKAsrSFclkwJ8Fn4h3qV0NUV5kTq3WdDc-Ij0XQDarVCMTu4aVLbWtS81uRUvoq58LC0Vvokc19TX8B5k20UvPbQovj6FI4y76IGcCcLgJgDb3BBtsgm5bTVcEzsz1tNEAfcM24STCQpSZA8fO7UE8r-_oq4xbC5ceJ9VzKRcg",
-                  titulo: "Apartamento de lujo en el centro",
-                  lugar: "Distrito Financiero",
-                  precio: "$1,200,000",
-                },
-                {
-                  img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBEDJ5Pw_HALVYTgDQ82dti-Aqxt-bgzavTJPEpQHfekURlD26AeHuqKono4jYfRCkX254t2gm1YYASHrrsaBkrj1RLwL5zBR7fNmMTOdN6ZvNF-3d2sMOiMdwBp7e8Dq8-AW_X3rz-UGjEJ_2cjvu9UrGo90w5AtEM_Vx2EZaLdfJeyGkjHsZ0W34531VgfxGAy3cPBG1RWLHb6y1dPiTe_817CHy7zrAZMj7uSE4KQ7SSqIwkzCbo1eZanS2A0-L_ClEOQlmyXA",
-                  titulo: "Cabaña acogedora en las afueras",
-                  lugar: "Villa Tranquila",
-                  precio: "$320,000",
-                },
-              ].map((prop, i) => (
+              {propiedades.map((prop) => (
                 <div
-                  key={i}
-                  className="group bg-white dark:bg-gray-900/50 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
+                  key={prop.id}
+                  className="group bg-white dark:bg-gray-900/50 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
                 >
                   <img
                     src={prop.img}
@@ -147,6 +143,22 @@ export default function Home() {
                     <p className="mt-2 text-xl font-bold text-primary">
                       {prop.precio}
                     </p>
+
+                    {/* ❤️ Guardar */}
+                    <button
+                      onClick={() => guardarPropiedad(prop)}
+                      className="mt-3 inline-block rounded bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition"
+                    >
+                      ❤️ Guardar propiedad
+                    </button>
+
+                    {/* 🔗 Ver detalles */}
+                    <button
+                      onClick={() => navigate(`/propiedad/${prop.id}`)}
+                      className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+                    >
+                      Ver detalles →
+                    </button>
                   </div>
                 </div>
               ))}
