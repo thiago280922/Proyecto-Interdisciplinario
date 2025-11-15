@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 👈 IMPORTANTE
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   const navigate = useNavigate(); // 👈 para navegar sin recargar
@@ -48,52 +50,36 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen w-full font-display bg-background-light text-gray-800 dark:bg-background-dark dark:text-gray-200">
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <img
-                src={"./logo_remax.png"}
-                alt="Re/Max Logo Globo"
-                className="h-10 w-auto"
-              />
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">Re/Max</h1>
-            </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="/contacto" className="text-sm font-medium hover:text-primary">
-                Contacto y Servicios
-              </a>
+    <div className="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
 
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Comprar
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Alquilar
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Vender
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Agentes
-              </a>
-            </nav>
-            <div className="flex items-center gap-4">
-              {/* 👇 usamos navigate para ir al login */}
-              <button
-                onClick={() => navigate("/login")}
-                className="text-sm font-medium hover:text-primary"
-              >
-                Iniciar Sesión
-              </button>
-
-              
-              <a href="/registro" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
-                Regístrate
-            </a>
-            </div>
+    {/* HEADER */}
+      <header className="border-b border-black/10 dark:border-white/10 px-4 md:px-8 lg:px-16">
+        <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
+          <div className="flex items-center gap-3">
+            <img src="./logo_remax.png" alt="Re/Max" className="h-10 w-auto" />
+            <h2 className="text-xl font-bold">Re/Max</h2>
           </div>
+
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="/contacto" className="text-sm font-medium hover:text-primary">Contacto y Servicios</a>
+            <a className="text-sm font-medium hover:text-primary" href="/comprar">Comprar</a>
+            <a className="text-sm font-medium hover:text-primary" href="/vender">Vender</a>
+            <a className="text-sm font-medium hover:text-primary" href="/alquilar">Alquilar</a>
+            <a className="text-sm font-medium hover:text-primary" href="/asesoria">Asesoría</a>
+            <a className="text-sm font-medium hover:text-primary" href="/contactanos">Contactanos</a>
+            <a className="text-sm font-medium hover:text-primary" href="/agentes">Agentes</a>
+
+          </nav>
+
+          <div className="flex items-center gap-4">
+              <a href="/login" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
+              Iniciar Sesión
+            </a>
+            <a href="/registro" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
+              Regístrate
+            </a>
+          </div>
+
         </div>
       </header>
 
@@ -161,11 +147,14 @@ export default function Home() {
                     </button>
                   </div>
                 </div>
+                
               ))}
             </div>
+            
           </div>
         </section>
       </main>
     </div>
+    
   );
 }

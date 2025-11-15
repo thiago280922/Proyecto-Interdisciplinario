@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Import necesario
+import { Link } from "react-router-dom";
+
 
 export default function ContactoServicios() {
   const navigate = useNavigate(); // ✅ Hook declarado dentro del componente
@@ -11,35 +13,35 @@ export default function ContactoServicios() {
         <header className="border-b border-black/10 dark:border-white/10 px-4 md:px-8 lg:px-16">
           <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
             <div className="flex items-center gap-3">
-              <img
-                src={"./logo_remax.png"}
-                alt="Re/Max Logo Globo"
-                className="h-10 w-auto"
-              />
-              <h2 className="text-xl font-bold">Re/Max</h2>
+              <Link to="/" className="flex items-center gap-2 cursor-pointer">
+                <img
+                    src="./logo_remax.png"
+                    alt="Re/Max"
+                    className="h-10 w-auto"
+                />
+                <h2 className="text-xl font-bold">Re/Max</h2>
+              </Link>
             </div>
 
             <nav className="hidden md:flex items-center gap-8">
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Comprar
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Vender
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Alquilar
-              </a>
-              <a className="text-sm font-medium hover:text-primary" href="#">
-                Asesoría
-              </a>
-              <button className="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white hover:opacity-80">
-                Contáctanos
-              </button>
-            </nav>
+            <a href="/contacto" className="text-sm font-medium hover:text-primary">Contacto y Servicios</a>
+            <a className="text-sm font-medium hover:text-primary" href="/comprar">Comprar</a>
+            <a className="text-sm font-medium hover:text-primary" href="/vender">Vender</a>
+            <a className="text-sm font-medium hover:text-primary" href="/alquilar">Alquilar</a>
+            <a className="text-sm font-medium hover:text-primary" href="/asesoria">Asesoría</a>
+            <a className="text-sm font-medium hover:text-primary" href="/contactanos">Contactanos</a>
+            <a className="text-sm font-medium hover:text-primary" href="/agentes">Agentes</a>
 
-            <button className="md:hidden">
-              <span className="material-symbols-outlined">menu</span>
-            </button>
+          </nav>
+
+          <div className="flex items-center gap-4">
+              <a href="/login" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
+              Iniciar Sesión
+            </a>
+            <a href="/registro" className="rounded bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90">
+              Regístrate
+            </a>
+          </div>
           </div>
         </header>
 
@@ -132,21 +134,27 @@ export default function ContactoServicios() {
                     text: "El equipo de Re/Max me ayudó a encontrar la casa perfecta. Su atención y profesionalismo fueron excepcionales.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDtXTOx0_S_WNqxtw1N9kY79KLntDqYqecysTimwkQlqEP-vxsKWepgfUq1Wyb1W0JNM3cv33aBbv4LbEi0JvokXWelBi1_HomMZofJCHP-odDpXxC0Oz5Zs3ACw5bZQUVV4YDNg0UvwdIENoABVckaqNMzmqI2VpXn4wvkIJYoumlr4o05XMVRk_3HnVML1HLwaTdybme8EUTtVccI2IaS70JJHnjMzGrx8HSsmT6UCcswiUJHHjIjSbsEtsN_1kXVflM5bzt-eg",
+                    img: "/testimonio.jpg",
                     title: "Venta rápida y eficiente",
                     text: "Gracias a Re/Max, vendí mi propiedad en tiempo récord y al mejor precio del mercado. Su estrategia fue clave.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBzjkV1M0shcRfAkTTa8Zij48W42q5TzPLYgKtXJP4-hVmNrTBjBGxNAXjYJGc_7lSPyRz9zDo12xQ34DcSm1TI8CLyf9JN9AUq9FvRuulFysIWFkvJ6SxqTLVfVXGkEzh2LLtQRxTCC82SSyV37rYU0ScagM72cWv0GVe30Zv17BuMRsu9bdxSFs8nG-pTG-J4UvB3x2c85X6sQUUtC08nCr2SLO7MjD8ZSMsp07wO-zd0ffkEnv9AJG4_Jzsj4-vJYf_9K_RtOw",
+                    img: "/testimonio.jpg",
                     title: "Encontré el lugar perfecto para mi familia",
                     text: "Re/Max me guió en cada paso del proceso de alquiler. Encontré un hogar que superó mis expectativas.",
                   },
                 ].map((t, i) => (
                   <div key={i} className="flex flex-col gap-4">
                     <div
-                      className="aspect-square w-full rounded-lg bg-cover bg-center"
-                      style={{ backgroundImage: `url(${t.img})` }}
-                    ></div>
+                      className="aspect-square w-full rounded-lg overflow-hidden" // Contenedor cuadrado
+                    >
+                      <img
+                        src={t.img}
+                        alt={`Foto de ${t.title}`}
+                        className="w-full h-full object-cover" // La imagen llena y se adapta
+                      />
+                    </div>
+                    {/* TEXTO DE LA DESCRIPCIÓN (sin cambios) */}
                     <div>
                       <h3 className="font-bold">{t.title}</h3>
                       <p className="text-sm text-black/60 dark:text-white/60">
@@ -196,21 +204,25 @@ export default function ContactoServicios() {
                   Nuestra Ubicación
                 </h2>
                 <div
-                  className="mb-4 aspect-video w-full rounded-lg bg-cover bg-center"
-                  style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiByEU8KmF5Hoage7N7IKAkRDpLRh4xGJ80MBa8wpUX7bU2YO8TtOkxIhEmymNG_Tq03STKU5-64VizRxzg0X66I4wWQ5kN81uS966W7_wLzcAQVg3ngQoOF-GMW5gq70AcYZ7RNcXIk2ai7FFoaFXB4P8AOKuR-NjHqXI14kJRUrI7ic6gGL8zsq6omD7x7dcmeoWtH653rIzkGRr1H22FtIsY6L3YeCHp3EXLkGRmtWF2yhJ5L8Btl_jIAiGS331y1M_xBTprQ')",
-                  }}
-                ></div>
+                  // Quitamos 'bg-cover bg-center' del div, ya no es un fondo.
+                  className="mb-4 aspect-video w-full rounded-lg overflow-hidden" 
+                >
+                  <img
+                    src={"/ubicacion.png"}
+                    alt="Mapa de Ubicación de Re/Max" // Cambié el alt
+                    // Aplicamos clases para que la imagen llene el contenedor
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
                 <p className="font-semibold">Re/Max España</p>
                 <p className="text-black/60 dark:text-white/60">
-                  Calle de Velázquez, 150, 28002 Madrid, España
+                  Bauness 2800, C1431 Cdad. Autónoma de Buenos Aires
                 </p>
                 <p className="mt-2 text-black/60 dark:text-white/60">
-                  Teléfono: +34 91 563 45 67
+                  Teléfono: +54 011 2473-7553
                 </p>
                 <p className="text-black/60 dark:text-white/60">
-                  Correo electrónico: info@remax.es
+                  Correo electrónico: remax.com.ar
                 </p>
               </div>
             </section>
@@ -221,7 +233,8 @@ export default function ContactoServicios() {
         <footer className="mt-auto border-t border-black/10 bg-white dark:border-white/10 dark:bg-black/20">
           <div className="mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-16 text-center">
             <p className="text-sm text-black/60 dark:text-white/60">
-              © 2024 Re/Max España. Todos los derechos reservados.
+              © 2025 Re/Max Argentina. Todos los derechos reservados.
+              Thiago Casiano, Brunella Figallo y Morena Gonzalez
             </p>
           </div>
         </footer>

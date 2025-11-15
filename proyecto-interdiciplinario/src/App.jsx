@@ -13,6 +13,12 @@ import Transacciones from "./pages/Transacciones";
 import Perfil from "./pages/Perfil";
 import Ayuda from "./pages/Ayuda";
 import Configuracion from "./pages/Configuracion";
+import Comprar from "./pages/Comprar";
+import Vender from "./pages/Vender";
+import Alquilar from "./pages/Alquilar";
+import Asesoria from "./pages/Asesoria";
+import Contactanos from "./pages/Contactanos";
+
 
 
 function App() {
@@ -33,6 +39,12 @@ function App() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/ayuda" element={<Ayuda />} />
         <Route path="/configuracion" element={<Configuracion />} />
+        <Route path="/comprar" element={<Comprar />} />
+        <Route path="/vender" element={<Vender />} />
+        <Route path="/alquilar" element={<Alquilar />} />
+        <Route path="/asesoria" element={<Asesoria />} />
+        <Route path="/contactanos" element={<Contactanos />} />
+
 
       </Routes>
     </Router>
