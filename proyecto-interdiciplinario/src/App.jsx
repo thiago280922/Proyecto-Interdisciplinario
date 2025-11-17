@@ -18,21 +18,27 @@ import Vender from "./pages/Vender";
 import Alquilar from "./pages/Alquilar";
 import Asesoria from "./pages/Asesoria";
 import Contactanos from "./pages/Contactanos";
+import Agentes from "./pages/Agentes";
 
+import VisitasAgente from "./pages/VisitasAgente";
+import LeadsAgente from "./pages/LeadsAgente";
+import InformesAgente from "./pages/InformesAgente";
 
+import ConfiguracionAgente from "./pages/ConfiguracionAgente";
 
 function App() {
   return (
     <Router>
       <Routes>
+
+        {/* Publico */}
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} /> {/* 👈 agregado para tu caso */}
+        <Route path="/home" element={<Home />} />
         <Route path="/propiedad/:id" element={<DetallePropiedad />} />
         <Route path="/guardadas" element={<PropiedadesGuardadas />} />
-        <Route path="/agente" element={<PanelAgente />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
-        <Route path="/admin" element={<PanelAdmin />} />
+        <Route path="/paneladmin" element={<PanelAdmin />} />
         <Route path="/contacto" element={<ContactoServicios />} />
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/transacciones" element={<Transacciones />} />
@@ -44,7 +50,15 @@ function App() {
         <Route path="/alquilar" element={<Alquilar />} />
         <Route path="/asesoria" element={<Asesoria />} />
         <Route path="/contactanos" element={<Contactanos />} />
+        <Route path="/agentes" element={<Agentes />} />
 
+        {/* Panel Agente */}
+        <Route path="/agente" element={<PanelAgente />} />
+        <Route path="/agente/visitasagente" element={<VisitasAgente />} />
+        <Route path="/agente/leadsagente" element={<LeadsAgente />} />
+        <Route path="/agente/informesagente" element={<InformesAgente />} />
+
+        <Route path="/agente/configuracion" element={<ConfiguracionAgente />} />
 
       </Routes>
     </Router>

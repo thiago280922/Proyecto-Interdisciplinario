@@ -10,25 +10,41 @@ export default function DetallePropiedad() {
     return <div className="p-10 text-red-500">Propiedad no encontrada</div>;
   }
 
-  return (
+    return (
     <div className="flex min-h-screen bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
-
-      {/* SIDEBAR */}
-      <aside className="w-72 bg-white dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 hidden lg:flex flex-col justify-between">
+      {/* === SIDEBAR === */}
+      <aside className="w-72 bg-white dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 flex-col justify-between hidden lg:flex">
         <div className="p-6">
-          <h1 className="text-2xl font-bold mb-8">Re/Max</h1>
+          <h1 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+            Re/Max
+          </h1>
           <nav className="flex flex-col gap-2">
-            <a href="/" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">🏠 Inicio</a>
-            <a href="/guardadas" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">❤️ Guardadas</a>
-            <a href="/reservas" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">📅 Reservas</a>
-            <a href="/perfil" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">👤 Perfil</a>
+            <a href="/" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              🏠 <span>Inicio</span>
+            </a>
+            <a href="/guardadas" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              ❤️ <span>Propiedades guardadas</span>
+            </a>
+            <a href="/reservas" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              📅 <span>Reservas</span>
+            </a>
+            <a href="/transacciones" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              💰 <span>Transacciones</span>
+            </a>
+            <a href="/perfil" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              👤 <span>Perfil</span>
+            </a>
           </nav>
         </div>
 
         <div className="p-6">
           <nav className="flex flex-col gap-1">
-            <a href="/ayuda" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">❓ Ayuda</a>
-            <a href="/configuracion" className="flex items-center gap-3 px-4 py-2 rounded hover:bg-primary/10 dark:hover:bg-primary/20">⚙️ Configuración</a>
+            <a href="/ayuda" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              ❓ <span>Ayuda</span>
+            </a>
+            <a href="/configuracion" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
+              ⚙️ <span>Configuración</span>
+            </a>
           </nav>
         </div>
       </aside>

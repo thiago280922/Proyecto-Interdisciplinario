@@ -18,10 +18,10 @@ export default function PropiedadesGuardadas() {
 
   return (
     <div className="flex min-h-screen bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
-      {/* SIDEBAR */}
+      {/* === SIDEBAR === */}
       <aside className="w-72 bg-white dark:bg-background-dark border-r border-gray-200 dark:border-gray-800 flex-col justify-between hidden lg:flex">
         <div className="p-6">
-          <h1 className="text-2xl font-bold text-foreground-light dark:text-foreground-dark mb-8">
+          <h1 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
             Re/Max
           </h1>
           <nav className="flex flex-col gap-2">
@@ -48,7 +48,7 @@ export default function PropiedadesGuardadas() {
             <a href="/ayuda" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
               ❓ <span>Ayuda</span>
             </a>
-            <a href="/configuracion" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-bold bg-primary text-white">
+            <a href="/configuracion" className="flex items-center gap-3 px-4 py-2 rounded text-sm font-medium hover:bg-primary/10 dark:hover:bg-primary/20">
               ⚙️ <span>Configuración</span>
             </a>
           </nav>

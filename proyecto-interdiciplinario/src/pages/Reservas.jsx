@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import agentes from "../data/agentes";
 
 export default function Reservas() {
   const [reservas, setReservas] = useState([]);
@@ -101,15 +102,22 @@ export default function Reservas() {
             className="border rounded-lg p-2 w-full mb-3 dark:bg-gray-800"
           />
 
-          <input
-            type="text"
-            placeholder="👤 Agente asignado"
+          <select
             value={nuevaReserva.agente}
             onChange={(e) =>
               setNuevaReserva({ ...nuevaReserva, agente: e.target.value })
             }
             className="border rounded-lg p-2 w-full mb-3 dark:bg-gray-800"
-          />
+          >
+            <option value="">👤 Seleccionar agente</option>
+
+            {agentes.map((agente) => (
+              <option key={agente.id} value={agente.nombre}>
+                {agente.nombre} — {agente.especialidad}
+              </option>
+            ))}
+          </select>
+
 
           <input
             type="datetime-local"
