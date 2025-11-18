@@ -55,7 +55,7 @@ export default function PanelAdmin() {
                 🏠 Panel de control
             </a>
             <a
-                href="#"
+                href=""
                 className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-primary/10 rounded-lg"
             >
                 🏢 Propiedades

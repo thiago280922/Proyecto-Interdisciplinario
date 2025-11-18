@@ -141,7 +141,7 @@ export default function Home() {
                     {/* 🔗 Ver detalles */}
                     <button
                       onClick={() => navigate(`/propiedad/${prop.id}`)}
-                      className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
+                      className="mt-3 inline-block text-sm font-medium text-primary hover:underline ml-4"
                     >
                       Ver detalles →
                     </button>

@@ -26,6 +26,8 @@ import InformesAgente from "./pages/InformesAgente";
 
 import ConfiguracionAgente from "./pages/ConfiguracionAgente";
 
+import ConfiguracionAgente from "./pages/ConfiguracionAgente";
+
 function App() {
   return (
     <Router>

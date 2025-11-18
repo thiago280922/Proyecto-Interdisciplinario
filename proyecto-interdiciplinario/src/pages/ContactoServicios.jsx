@@ -65,7 +65,7 @@ export default function ContactoServicios() {
                   realidad tus sueños.
                 </p>
                 <button
-                  onClick={() => navigate("/")} // ✅ Navegación funcionando
+                  onClick={() => navigate("/comprar")} // ✅ Navegación funcionando
                   className="rounded-lg bg-primary px-6 py-3 text-base font-bold text-white hover:opacity-80"
                 >
                   Explorar propiedades

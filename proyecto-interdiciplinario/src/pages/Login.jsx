@@ -19,11 +19,12 @@ export default function Login() {
 
     // Lógica de acceso con distintos roles
     if (correo === "administrador@remax.com") {
-        usuario = { nombre: "Administrador", email: correo, telefono: "—", rol: "admin" };
-        alert("Bienvenido Administrador 👑");
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-        navigate("/admin");
-    } else if (correo === "agente@remax.com") {
+    usuario = { nombre: "Administrador", email: correo, telefono: "—", rol: "admin" };
+    alert("Bienvenido Administrador 👑");
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+    // CORRECCIÓN: Cambia "/admin" por "/paneladmin"
+    navigate("/paneladmin"); 
+} else if (correo === "agente@remax.com") {
         usuario = { nombre: "Agente Re/Max", email: correo, telefono: "—", rol: "agente" };
         alert("Bienvenido Agente 🧑‍💼");
         localStorage.setItem("usuario", JSON.stringify(usuario));
